@@ -1,0 +1,77 @@
+.navbar {
+    background-color: black;
+    padding: 0 0 4.5rem;
+}
+.nav-item {
+    padding: 0 18px;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.hh {
+    background-color: #212529;
+
+}
+.g {
+    text-align: center;
+    height: 20%;
+}
+.gg {
+    position: relative;
+    top: 50px;
+}
+.bod {
+    overflow: auto;
+    text-align: center;
+    height: 100%;
+    background-color: #212529;
+}
+.cord {
+    padding-top: 20px;
+}
+footer {
+    height: 41px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.foot {
+    padding-top: 6px;
+}
+#submit {
+    margin-top: 20px;
+}
+#email {
+    margin-bottom: 10px;
+}
+#passwords {
+    margin-bottom: 10px;
+}
+.error {
+    color: red;
+}
+.did {
+    color: white;
+    position: relative;
+    top: 250px;
+    text-align: center;
+}
+.form-popup {
+  display: none;
+}
+.modal {
+    text-align: center;
+    padding: 1em;
+    max-width: 50ch;
+}
+.card {
+    text-align: center;
+}
+#expired {
+    background-color: red;
+}

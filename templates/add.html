@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/form.html" as wtf %}
+{% block title %}Add To-Do{% endblock %}
+{% block content %}
+<div class="g">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        <h1>Add To-Do</h1>
+    </div>
+</div>
+    </div>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto content">
+{{ wtf.render_form(form, novalidate=True, button_map={"submit": "dark"}) }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Your Personal To-Do-List{% endblock %}
+{% block content %}
+<div class="g">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        {% if not current_user.is_authenticated: %}
+        <h1>Your personal TO-DO list</h1>
+        <p>Register or login to start.</p>
+        {% else: %}
+        <h1>Your personal TO-DO list</h1>
+        <p>Add To-Do to start.</p>
+        <a class="btn btn-dark" href="{{ url_for('add') }}">Add To-Do</a>
+        {% endif %}
+    </div>
+</div>
+    </div>
+{% if not current_user.is_authenticated: %}
+<div class="bod">
+<div class="container px-4 px-lg-5 hh">
+</div>
+</div>
+{% else: %}
+<div class="bod">
+<div class="container px-4 px-lg-5 hh">
+    <div class="container px-4 px-lg-5 cord">
+        {% if not todos: %}
+        <h1 class="did">There could be your To-Do</h1>
+        {% endif %}
+        {% for todo in todos: %}
+        {% if current_user.id == todo.user_id: %}
+ <div class="card" style="width: 18rem; margin-top: 10px; display: inline-block; margin-left: 10px" id="card">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;">{{todo.name}}</h5>
+    <p class="card-text" style="text-align: center;">Expiration date:</p>
+    <p class="card-text" style="text-align: center;">{{todo.due_date}}</p>
+    <a class="btn btn-dark" href="{{ url_for('delete', to_id=todo.id) }}">Did it!</a>
+  </div>
+     </div>
+        {% endif %}
+        {% endfor %}
+</div>
+</div>
+    </div>
+{% endif %}
+<footer>
+    <p class="foot">Kael's Website</p>
+</footer>
+{% endblock %}
